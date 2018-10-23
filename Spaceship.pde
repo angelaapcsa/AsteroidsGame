@@ -55,8 +55,5 @@ class Spaceship extends Floater
   {
     myPointDirection+=nDegreesOfRotation;
   }
-  public void show()
-  {
-  }
 
 }

@@ -1,10 +1,30 @@
-//your variable declarations here
+Spaceship one;
+
 public void setup() 
 {
-  //your code here
+  size(300,300);
+  one = new Spaceship();
 }
 public void draw() 
 {
-  //your code here
+  one.setX(150);
+  one.setY(150);
+  one.show();
 }
-
+public void keyPressed()
+{
+  if (key == CODED)
+  {
+    if (keyCode == UP)
+    {
+      one.accelerate(1.5);
+    }
+    if (keyCode == LEFT)
+    {
+      one.turn(-20);
+    }
+    if(keyCode == RIGHT)
+    {
+      one.turn(20);
+    }
+}
