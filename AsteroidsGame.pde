@@ -10,6 +10,7 @@ public void draw()
   one.setX(150);
   one.setY(150);
   one.show();
+  one.move();
 }
 public void keyPressed()
 {
@@ -21,10 +22,11 @@ public void keyPressed()
     }
     if (keyCode == LEFT)
     {
-      one.turn(-20);
+      ;
     }
     if(keyCode == RIGHT)
     {
       one.turn(20);
     }
+  }
 }
