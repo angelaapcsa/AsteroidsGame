@@ -7,6 +7,7 @@ public void setup()
 }
 public void draw() 
 {
+  background(0);
   one.setX(150);
   one.setY(150);
   one.show();
@@ -18,15 +19,15 @@ public void keyPressed()
   {
     if (keyCode == UP)
     {
-      one.accelerate(1.5);
+      one.accelerate(10);
     }
     if (keyCode == LEFT)
     {
-      ;
+      one.turn(-10);
     }
     if(keyCode == RIGHT)
     {
-      one.turn(20);
+      one.turn(10);
     }
   }
 }

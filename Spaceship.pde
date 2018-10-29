@@ -42,15 +42,6 @@ class Spaceship extends Floater
       myCenterY = height;
     }
   }
-  public void accelerate (double dAmount)
-  {  
-    //convert the current direction the ship is
-    //pointing to radians
-    double dRadians =myPointDirection*(Math.PI/180);
-    //change coordinates of direction of travel
-    myDirectionX += ((dAmount) * Math.cos(dRadians));
-    myDirectionY += ((dAmount) * Math.sin(dRadians));    
-  }
   public void turn(int nDegreesOfRotation)
   {
     myPointDirection+=nDegreesOfRotation;
