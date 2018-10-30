@@ -2,16 +2,17 @@ Spaceship one;
 
 public void setup() 
 {
-  size(300,300);
+  size(600,600);
   one = new Spaceship();
 }
 public void draw() 
 {
   background(0);
-  one.setX(150);
-  one.setY(150);
+  one.setX(300);
+  one.setY(300);
   one.show();
   one.move();
+  System.out.println(one.getPointDirection());
 }
 public void keyPressed()
 {
@@ -19,7 +20,8 @@ public void keyPressed()
   {
     if (keyCode == UP)
     {
-      one.accelerate(10);
+      one.accelerate(100);
+      one.move();
     }
     if (keyCode == LEFT)
     {

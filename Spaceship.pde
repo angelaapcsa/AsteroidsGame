@@ -19,32 +19,4 @@ class Spaceship extends Floater
     yCorners = yS;
     myColor = (255);
   }
-  public void move ()
-  {  
-  //Moves the floater towards the coordinates
-  //myDirectionX and myDirectionY
-
-  //move the floater in the current direction of travel
-    myCenterX += myDirectionX;
-    myCenterY += myDirectionY;
-
-  //wrap around screen
-    if(myCenterX >width){
-      myCenterX = 0;
-    }
-    else if (myCenterX<0){
-      myCenterX = width;
-    }
-    if(myCenterY >height){
-      myCenterY = 0;
-    }
-    else if (myCenterY < 0){
-      myCenterY = height;
-    }
-  }
-  public void turn(int nDegreesOfRotation)
-  {
-    myPointDirection+=nDegreesOfRotation;
-  }
-
 }
