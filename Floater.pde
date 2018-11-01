@@ -31,11 +31,6 @@ abstract class Floater //Do NOT modify the Floater class! Make changes in the Sp
     //rotates the floater by a given number of degrees    
     myPointDirection+=nDegreesOfRotation; 
     
-    if (nDegreesOfRotation == 360){
-      nDegreesOfRotation = 0;
-    }if (nDegreesOfRotation > 360){
-      nDegreesOfRotation - 360 = nDegreesOfRotation;
-    }
   }   
   public void move ()   //move the floater in the current direction of travel
   {      
