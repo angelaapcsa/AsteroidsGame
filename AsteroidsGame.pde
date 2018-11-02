@@ -19,25 +19,31 @@ public void draw()
   }
   one.show();
   one.move();
-  System.out.println("Point direction: " + one.getPointDirection());
-  System.out.println("DirectionX: " + one.getDirectionX());
-  System.out.println("DirectionY: " + one.getDirectionY());
-}
+  }
 public void keyPressed()
 {
   if (key == CODED)
   {
-    if (keyCode == UP)
+    if (keyCode == UP) //accelerate
     {
-      one.accelerate(.7);
+      one.accelerate(.75);
     }
-    if (keyCode == LEFT)
+    if (keyCode == LEFT) //counter
     {
       one.turn(-10);
     }
-    if(keyCode == RIGHT)
+    if(keyCode == RIGHT) //clockwise
     {
       one.turn(10);
     }
   }
+  else if(key == 'h') //hyperspace
+    {
+      one.setX((int)(Math.random()*500));
+      one.setY((int)(Math.random()*500));
+      one.setDirectionX(0);
+      one.setDirectionY(0);
+      one.setPointDirection((int)(Math.random()*361)); 
+    }
+ 
 }
