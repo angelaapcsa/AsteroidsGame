@@ -1,10 +1,13 @@
 Spaceship one;
+Asteroid two;
 Star [] nightSky = new Star[200];
 public void setup() 
 {
   background(0);
   size(600,600);
   one = new Spaceship();
+  two = new Asteroid();
+  
   for (int i = 0; i<nightSky.length; i++)
   {
     nightSky[i] = new Star();
@@ -18,6 +21,7 @@ public void draw()
     nightSky[i].show();
   }
   one.show();
+  two.show();
   one.move();
   }
 public void keyPressed()
