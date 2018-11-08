@@ -1,16 +1,17 @@
 Spaceship one;
-Asteroid two;
+ArrayList <Asteroid> two = new ArrayList <Asteroid>();
 Star [] nightSky = new Star[200];
 public void setup() 
 {
   background(0);
   size(600,600);
   one = new Spaceship();
-  two = new Asteroid();
-  
   for (int i = 0; i<nightSky.length; i++)
   {
     nightSky[i] = new Star();
+  }
+  for(int j = 0; j<25; j++){
+    two.add(j, new Asteroid());
   }
 }
 public void draw() 
@@ -20,8 +21,17 @@ public void draw()
   {
     nightSky[i].show();
   }
+  for(int j = 0; j<two.size(); j++)
+  {  //asteroids
+     two.get(j).move();
+     two.get(j).show();
+     if(dist(one.getX(), one.getY(), two.get(j).getX(), two.get(j).getY()) <= 20)
+     {
+        two.remove(j);
+        two.add(j, new Asteroid());
+     }
+  }
   one.show();
-  two.show();
   one.move();
   }
 public void keyPressed()
